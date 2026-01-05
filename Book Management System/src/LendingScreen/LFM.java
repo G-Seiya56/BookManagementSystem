@@ -1,0 +1,68 @@
+package LendingScreen;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class LFM extends JFrame{
+    public LFM(){
+        new LFM("貸出システム");
+    }
+    public LFM(String title){
+        super(title);
+
+        JPanel suf = new JPanel();
+        suf.setLayout(null);
+
+//      ラベル欄
+        JLabel lan ,lab , lalp ,aw , ren , ret;
+        lan = new JLabel("氏名");
+        lan.setBounds(30, 30, 80, 30);
+        suf.add(lan);
+        lab = new JLabel("書籍名");
+        lab.setBounds(30, 75, 80, 30);
+        suf.add(lab);
+        ren = new JLabel("貸出日");
+        ren.setBounds(122,110,80,30);
+        suf.add(ren);
+        ret = new JLabel("返却日");
+        ret.setBounds(272,110,80,30);
+        suf.add(ret);
+        aw = new JLabel("〜");
+        aw.setBounds(210,135,80,30);
+        suf.add(aw);
+        lalp = new JLabel("貸出期間");
+        lalp.setBounds(30,135,80,30);
+        suf.add(lalp);
+
+//      テキストフォーマット
+        JTextField tfn , tfb , tfLs , tfLe;
+        tfn =new JTextField(7);
+        tfn.setBounds(90,30,105,30);
+        suf.add(tfn);
+        tfb = new JTextField();
+        tfb.setBounds(90,75,255,30);
+        suf.add(tfb);
+        tfLs = new JTextField();
+        tfLs.setBounds(90,135,105,30);
+        suf.add(tfLs);
+        tfLe = new JTextField();
+        tfLe.setBounds(240,135,105,30);
+        suf.add(tfLe);
+
+//      ボタン欄
+        JButton bur , bub;
+        bur = new JButton("貸出");
+        bur.setBounds(240,180,75,35);
+        suf.add(bur);
+        bub = new JButton(new BackHomeAction(this));
+        bub.setBounds(325,180,75,35);
+        suf.add(bub);
+
+        Container ContentPane = getContentPane();
+        ContentPane.add(suf);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(430 ,270);
+        setVisible(true);
+    }
+}
