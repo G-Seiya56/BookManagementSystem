@@ -38,10 +38,7 @@ public class RFM extends JFrame{
         suf.add(lalp);
 
 //      テキストフォーマット
-        JTextField tfb , tfn , tfLs , tfLe;
-        tfb = new JTextField();
-        tfb.setBounds(90,30,255,30);
-        suf.add(tfb);
+        JTextField tfn , tfLs , tfLe;
         tfn =new JTextField(7);
         tfn.setBounds(90,75,105,30);
         suf.add(tfn);
@@ -51,6 +48,13 @@ public class RFM extends JFrame{
         tfLe = new JTextField();
         tfLe.setBounds(240,135,105,30);
         suf.add(tfLe);
+
+//      コンボボックス欄
+        String[] bl = {"３ステップでしっかり学ぶ PHP入門" , "３ステップでしっかり学ぶ javaScript入門"
+        ,"スラスラわかるHTML&CSSのきほん" ,"ぜったいできます！ ワード＆エクセル超入門",  "ビジネス実務法務試験3級"};
+        JComboBox<String> cbl = new JComboBox<String>(bl);
+        cbl.setBounds(90,30,320,30);
+        suf.add(cbl);
 
 //      ボタン欄
         JButton bur , bub;

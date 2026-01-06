@@ -35,19 +35,23 @@ public class LFM extends JFrame{
         suf.add(lalp);
 
 //      テキストフォーマット
-        JTextField tfn , tfb , tfLs , tfLe;
+        JTextField tfn , tfLs , tfLe;
         tfn =new JTextField(7);
         tfn.setBounds(90,30,105,30);
         suf.add(tfn);
-        tfb = new JTextField();
-        tfb.setBounds(90,75,255,30);
-        suf.add(tfb);
         tfLs = new JTextField();
         tfLs.setBounds(90,135,105,30);
         suf.add(tfLs);
         tfLe = new JTextField();
         tfLe.setBounds(240,135,105,30);
         suf.add(tfLe);
+
+//      コンボボックス欄
+        String[] bl = {"３ステップでしっかり学ぶ PHP入門" , "３ステップでしっかり学ぶ javaScript入門"
+        ,"スラスラわかるHTML&CSSのきほん" ,"ぜったいできます！ ワード＆エクセル超入門",  "ビジネス実務法務試験3級"};
+        JComboBox<String> cbl = new JComboBox<String>(bl);
+        cbl.setBounds(90,75,320,30);
+        suf.add(cbl);
 
 //      ボタン欄
         JButton bur , bub;

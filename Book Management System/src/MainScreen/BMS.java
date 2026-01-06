@@ -25,7 +25,7 @@ public class BMS extends JFrame {
         StockConfirmation.setBounds(205, 195, 200, 50);
         panel.add(StockConfirmation);
 
-        Exit = new JButton("終了");
+        Exit = new JButton(new ExitAction());
         panel.add(Exit);
         Exit.setBounds(205, 280, 200, 50);
         pane.add(panel);
