@@ -32,7 +32,7 @@ public class BMS extends JFrame {
 
         //フレームワーク
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(610, 400);
+        setBounds(400,200,610,400);
         setVisible(true);
     }
 }

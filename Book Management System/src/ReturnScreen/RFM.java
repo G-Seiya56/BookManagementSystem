@@ -82,7 +82,7 @@ public class RFM extends JFrame{
         ContentPane.add(suf);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(430 ,350);
+        setBounds(500,250,430,350);
         setVisible(true);
     }
 }
