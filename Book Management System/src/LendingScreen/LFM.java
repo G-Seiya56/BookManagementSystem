@@ -1,5 +1,6 @@
 package LendingScreen;
 
+import com.toedter.calendar.JDateChooser;
 import javax.swing.*;
 import java.awt.*;
 
@@ -31,17 +32,17 @@ public class LFM extends JFrame{
         laren.setBounds(122,195,80,30);
         suf.add(laren);
         laret = new JLabel("返却日");
-        laret.setBounds(272,195,80,30);
+        laret.setBounds(292,195,80,30);
         suf.add(laret);
         aw = new JLabel("〜");
-        aw.setBounds(210,195,80,30);
+        aw.setBounds(230,195,80,30);
         suf.add(aw);
         lalp = new JLabel("貸出期間");
         lalp.setBounds(30,220,80,30);
         suf.add(lalp);
 
 //      テキストフォーマット
-        JTextField tfn , tfpc ,tfad , tfLs , tfLe;
+        JTextField tfn , tfpc ,tfad ;
         tfn =new JTextField(7);
         tfn.setBounds(90,30,105,30);
         suf.add(tfn);
@@ -51,12 +52,6 @@ public class LFM extends JFrame{
         tfad = new JTextField();
         tfad.setBounds(90,120,320,30);
         suf.add(tfad);
-        tfLs = new JTextField();
-        tfLs.setBounds(90,220,105,30);
-        suf.add(tfLs);
-        tfLe = new JTextField();
-        tfLe.setBounds(240,220,105,30);
-        suf.add(tfLe);
 
 //      コンボボックス欄
         String[] bl = {"３ステップでしっかり学ぶ PHP入門" , "３ステップでしっかり学ぶ javaScript入門"
@@ -65,9 +60,18 @@ public class LFM extends JFrame{
         cbl.setBounds(90,165,320,30);
         suf.add(cbl);
 
+//      貸出カレンダー欄
+        JDateChooser dcLs , dcLe;
+        dcLs = new JDateChooser();
+        dcLs.setBounds(90,220,125,30);
+        suf.add(dcLs);
+        dcLe = new JDateChooser();
+        dcLe.setBounds(260,220,125,30);
+        suf.add(dcLe);
+
 //      ボタン欄
         JButton buse, bur , bub;
-        buse = new JButton( "検索");
+        buse = new JButton(new SearchAction(tfpc , tfad));
         buse.setBounds(175,75,80,30);
         suf.add(buse);
         bur = new JButton("貸出");
